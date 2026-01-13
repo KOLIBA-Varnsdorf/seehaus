@@ -9,18 +9,17 @@ overflow-x: hidden;
   }
 
 nav {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 30px;
-background: rgba(47,93,80,0.7);
-padding: 10px 20px;
-position: absolute;
-top: 0;
-width: 100%;
-max-width: 100%;
-box-sizing: border-box;
-z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(47,93,80,0.7);
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 100%;  /* verhindert Überlauf */
+  box-sizing: border-box; /* Padding wird mit Breite gerechnet */
+  z-index: 10;
 }
 
 .menu {
