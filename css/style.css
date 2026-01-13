@@ -3,6 +3,6 @@ nav { display: flex; justify-content: space-between; align-items: center; backgr
 .menu { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
 .menu a { color: white; text-decoration: none; }
 .lang-switch img { cursor: pointer; margin-left: 10px; }
-.hero img { width: 100%; height: auto; display: block; }
+.hero img { width: 70%; height: auto; display: block; }
 main { padding: 20px; }
 footer { background: #eee; text-align: center; padding: 10px; }
