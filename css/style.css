@@ -43,19 +43,16 @@ text-decoration: none;
 }
 
 .hero {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-width: 100%;
-max-width: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero img {
-width: auto;
-max-width: 100%;
-height: auto;
-display: block;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero .title {
