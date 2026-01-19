@@ -9,25 +9,27 @@ overflow-x: hidden;
   }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(47,93,80,0.7);
-  padding: 10px 20px;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  max-width: 100%;  /* verhindert Überlauf */
-  box-sizing: border-box; /* Padding wird mit Breite gerechnet */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(47,93,80,0.7);
+  box-sizing: border-box;
   z-index: 10;
 }
 
 .menu {
-list-style: none;
-display: flex;
-gap: 30px;
-margin: 0;
-padding: 0;
+  grid-column: 2;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
 .menu a {
@@ -35,9 +37,9 @@ color: white;
 text-decoration: none;
 }
 
-.lang-switch img {
-cursor: pointer;
-margin-left: 10px;
+.lang-switch {
+  grid-column: 3;
+  justify-self: end;
 }
 
 .hero {
