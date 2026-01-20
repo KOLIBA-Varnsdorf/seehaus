@@ -6,67 +6,79 @@
 <link rel="stylesheet" href="css/style.css" />
 <script defer src="js/lang.js"></script>
 </head>
+
 <body>
+
 <header>
-<nav>
-<ul class="menu">
-<li><a href="index.html" data-de="Start" data-cs="Úvod">Start</a></li>
-<li><a href="unterbringung.html" data-de="Unterbringung" data-cs="Ubytování">Unterbringung</a></li>
-<li><a href="umgebung.html" data-de="Umgebung" data-cs="Okolí">Umgebung</a></li>
-<li><a href="galerie.html" data-de="Galerie" data-cs="Galerie">Galerie</a></li>
-<li><a href="kontakt.html" data-de="Kontakt" data-cs="Kontakt">Kontakt</a></li>
-</ul>
-<div class="lang-switch">
-<img src="https://flagcdn.com/w20/de.png" alt="Deutsch" onclick="setLang('de')">
-<img src="https://flagcdn.com/w20/cz.png" alt="Česky" onclick="setLang('cs')">
-</div>
-</nav>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html" data-de="Start" data-cs="Úvod">Start</a></li>
+      <li><a href="unterbringung.html" data-de="Unterbringung" data-cs="Ubytování">Unterbringung</a></li>
+      <li><a href="umgebung.html" data-de="Umgebung" data-cs="Okolí">Umgebung</a></li>
+      <li><a href="galerie.html" data-de="Galerie" data-cs="Galerie">Galerie</a></li>
+      <li><a href="kontakt.html" data-de="Kontakt" data-cs="Kontakt">Kontakt</a></li>
+    </ul>
+
+    <div class="lang-switch">
+      <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" onclick="setLang('de')">
+      <img src="https://flagcdn.com/w20/cz.png" alt="Česky" onclick="setLang('cs')">
+    </div>
+  </nav>
 </header>
 
-
+<!-- HERO -->
 <section class="hero">
   <img src="images/seehaus-koliba.jpg" alt="Seehaus KOLIBA">
   <div class="title">Seehaus KOLIBA</div>
 </section>
 
-
 <main>
-<section>
-<h2 data-de="Was Ihnen das Seehaus KOLIBA bietet" data-cs="Vaše výhody">Was Ihnen das Seehaus KOLIBA bietet</h2>
-<ul>
-  <li data-de="Gruppenhaus für bis zu 23 Personen direkt am Varnsdorfer See"
-      data-cs="Skupinový dům až pro 23 osob přímo u Varnsdorfského jezera">
-    Gruppenhaus für bis zu 23 Personen direkt am Varnsdorfer See
-  </li>
 
-  <li data-de="Unterbringung in 6 Zwei- bis Fünfbettzimmern"
-      data-cs="Ubytování v 6 dvou- až pětilůžkových pokojích">
-    Unterbringung in 6 Zwei- bis Fünfbettzimmern
-  </li>
+<!-- VORTEILE -->
+<section class="advantages">
+  <h2 data-de="Was Ihnen das Seehaus KOLIBA bietet"
+      data-cs="Co vám nabízí Seehaus KOLIBA">
+    Was Ihnen das Seehaus KOLIBA bietet
+  </h2>
 
-  <li data-de="Großer Gemeinschaftsraum und überdachte Terrasse mit Seeblick"
-      data-cs="Velká společenská místnost a krytá terasa s výhledem na jezero">
-    Großer Gemeinschaftsraum und überdachte Terrasse mit Seeblick
-  </li>
-
-  <li data-de="Alleinbelegung - Vermietung immer nur an eine Gruppe"
-      data-cs="Velká společenská místnost a krytá terasa s výhledem na jezero">
-    Alleinbelegung - Vermietung immer nur an eine Gruppe
-  </li>
-</ul>
+  <ul class="adv-list">
+    <li>
+      Gruppenhaus für bis zu 23 Personen direkt am Varnsdorfer See
+    </li>
+    <li>
+      Unterbringung in 6 Zwei- bis Fünfbettzimmern
+    </li>
+    <li>
+      Großer Gemeinschaftsraum und überdachte Terrasse mit Seeblick
+    </li>
+    <li>
+      Alleinbelegung – Vermietung immer nur an eine Gruppe
+    </li>
+  </ul>
 </section>
 
+<!-- KALENDER -->
+<section class="calendar">
+  <h2 data-de="Belegungskalender"
+      data-cs="Kalendář obsazenosti">
+    Belegungskalender
+  </h2>
 
-<section>
-<h2 data-de="Belegungskalender" data-cs="Kalendář obsazenosti">Belegungskalender</h2>
-<!-- Google Kalender: Ersetzen Sie die src-URL mit Ihrem eigenen Kalender -->
-<iframe src="https://calendar.google.com/calendar/embed?src=IHRE_KALENDER_ID" style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=IHRE_KALENDER_ID"
+    style="border:0"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
 </section>
+
 </main>
 
-
 <footer>
-<p>© Seehaus KOLIBA</p>
+  <p>© Seehaus KOLIBA</p>
 </footer>
+
 </body>
 </html>
