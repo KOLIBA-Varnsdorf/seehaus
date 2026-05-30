@@ -1,0 +1,57 @@
+</> YAML
+name: Sync Calendar
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download ICS
+        run: |
+          curl -L "https://www.gruppenhaus.de/ical_A92KDNX27160313810_hs12783_dp_bs.ics" -o calendar.ics
+
+      - name: Convert ICS to JSON
+        run: |
+          python3 << 'EOF'
+          import json
+          import re
+
+          with open("calendar.ics","r",encoding="utf-8",errors="ignore") as f:
+              txt=f.read()
+
+          events=[]
+
+          for block in txt.split("BEGIN:VEVENT"):
+              s=re.search(r"DTSTART.*:(\d{8})",block)
+              e=re.search(r"DTEND.*:(\d{8})",block)
+
+              if s and e:
+                  events.append({
+                      "start": f"{s.group(1)[0:4]}-{s.group(1)[4:6]}-{s.group(1)[6:8]}",
+                      "end": f"{e.group(1)[0:4]}-{e.group(1)[4:6]}-{e.group(1)[6:8]}"
+                  })
+
+          with open("bookings.json","w") as out:
+              json.dump(events,out,indent=2)
+          EOF
+
+      - name: Commit updated file
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add bookings.json
+
+          git diff --cached --quiet || git commit -m "Update bookings"
+
+          git push
